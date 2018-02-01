@@ -7,6 +7,22 @@ tabula-java [![Build Status](https://travis-ci.org/tabulapdf/tabula-java.svg?bra
 
 © 2014-2016 Manuel Aristarán. Available under MIT License. See [`LICENSE`](LICENSE).
 
+##Running using docker
+Download Dockerfile into your local directory
+
+Run 
+
+>docker build .
+
+Once the image was created with an ID, run tabula-java using 
+
+>docker run  --rm -it -v /home/i2b2xcutter/test/tabula-java:/data/  $imageID   java -jar /home/tabula-java/target/tabula-1.0.2-SNAPSHOT-jar-with-dependencies.jar -f CSV -g -b /data/
+
+For help, run 
+
+>docker run  --rm -it -v /home/i2b2xcutter/test/tabula-java:/data/  $imageID   java -jar /home/tabula-java/target/tabula-1.0.2-SNAPSHOT-jar-with-dependencies.jar --help
+
+
 ## Download
 
 Download a version of the tabula-java's jar, with all dependencies included, that works on Mac, Windows and Linux from our [releases page](../../releases).
